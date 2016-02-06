@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     xmlns:coverflow="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg">
+    android:background="@drawable/landing">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -12,11 +12,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight=".8">
+                android:layout_weight=".9">
                 <com.h5c.careengage.designing.coverflowlib.containers.FeatureCoverFlow
                     android:id="@+id/coverflow"
                     android:layout_width="match_parent"
@@ -32,12 +33,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight=".2">
+                android:layout_weight=".1">
                     <TextSwitcher
                         android:id="@+id/title"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:gravity="center"
                         android:textStyle="bold"/>
             </LinearLayout>
