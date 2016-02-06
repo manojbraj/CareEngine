@@ -318,7 +318,7 @@ public class HorizontalList extends ViewGroup {
 	}
 	
 	/**
-	 * 
+	 *
 	 * @param left X coordinate where should we start layout
 	 */
 	protected int layoutChild(View v, int left, MarginLayoutParams lp){
