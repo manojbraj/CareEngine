@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#414B54</color>
+    <color name="colorPrimaryDark">#404D55</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#F7F7F7</color>
+    <color name="black">#000000</color>
+    <color name="glucose_text_background">#3935A4</color>
+    <color name="blood_pressure_text_background">#0AA947</color>
+    <color name="dark_gray_glucose">#6F7376</color>
+    <color name="bp_red_color">#FB0000</color>
+    <color name="bp_aqu_color">#007AFF</color>
+
+    <!--sos-->
+    <color name="sos_settings_color">#469C76</color>
+    <color name="sos_settings_color_green">#64FF88</color>
+    <color name="sos_colorPrimary">#5EA788</color>
+    <color name="sos_colorPrimaryDark">#5EA788</color>
+    <color name="recent_updates_color">#18F1A2</color>
+    <color name="sos_dark_gb">#387c5e</color>
+
+    <!--settings-->
+    <color name="settings_colorPrimary">#1B9DC7</color>
+    <color name="settings_colorPrimaryDark">#1B9DC7</color>
+    <color name="settings_banner">#1186BF</color>
+
+    <!--forgot password-->
+    <color name="signUpColorPrimary">#436765</color>
+    <color name="signUpColorPrimaryDark">#436765</color>
+    <color name="forgot_password_buttonbg">#18BAAC</color>
+
+    <!--dashboard colors-->
+    <color name="low_risk">#BF2B23</color>
+    <color name="risk_level">#09494F</color>
+    <color name="systolic_diastolic">#1DA4C2</color>
+    <color name="bpm">#F35111</color>
+    <color name="low_risk_progress">#F87984</color>
+    <color name="bpm_color_one">#F8701F</color>
+    <color name="bpm_color_two">#48220E</color>
+    <color name="sos_popup_button">#03792F</color>
+
+    <!--landing page-->
+    <color name="dashboard_landingpage">#01484E</color>
+
+    <!--update profile-->
+    <color name="up_colorPrimary">#25CBC3</color>
+    <color name="up_colorPrimaryDark">#26CCC4</color>
+    <color name="up_gray_background">#E3E3E3</color>
+
+    <!--family child growth-->
+    <color name="babyColorPrimary">#6BBCCE</color>
+    <color name="babyColorPrimaryDark">#6BBCCE</color>
+    <color name="f_child_colorPrimary">#6BBCCE</color>
+    <color name="f_child_colorPrimaryDark">#6BBCCE</color>
+    <color name="f_child_growthTracker">#214F6C</color>
+    <color name="f_text_color">#00C1B7</color>
+    <color name="f_border_color">#59BDD4</color>
+    <color name="f_button_bg">#0D1320</color>
+    <color name="f_background_one">#3989BB</color>
+    <color name="f_text_color_two">#3BE7EE</color>
+    <color name="f_add_history_button_bg">#0D0308</color>
+    <color name="f_main_screen_colorPrimary">#F3BF87</color>
+    <color name="f_main_screen_colorPrimaryDark">#F3BF87</color>
+
 </resources>

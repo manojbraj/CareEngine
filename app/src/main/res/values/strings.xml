@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">CareEngine</string>
+    <string name="app_name">CareEngage</string>
+    <string name="glucose_tracker">Glucose Tracker</string>
+    <string name="blood_pressure_tracker">Blood Pressure Tracker</string>
+    <string name="date">Date(2016)</string>
+    <string name="blood_pressure">Blood Pressure Tracker</string>
+    <string name="diastolic_bp">Diastolic</string>
+    <string name="systolic_bp">Systolic</string>
+    <string name="badges">Award / Badges Earned</string>
+    <string name="welcome_to_care">UPDATE YOUR PROFILE TO\nGENERATE EMERGENCY\nCONTACT CARD</string>
+    <string name="systolic">Systolic\nmmHg</string>
+    <string name="diastolic">Diastolic\nmmHg</string>
+    <!--cover flow title-->
+    <string name="dashboard">Dashboard</string>
+    <string name="My_Activity_Plus">My Activity Plus</string>
+    <string name="my_health_wallet">My Health Wallet</string>
+    <string name="my_wellness">My Wellness</string>
+    <string name="my_health_diary">My Health Diary</string>
+    <string name="my_health_history">My Health History</string>
+    <string name="my_family_diary">My Family Diary</string>
+    <string name="my_messages">My Messages</string>
+    <string name="my_favourites">My Favourites</string>
+    <!--child growth-->
+    <string name="child_growth_tracker">PLEASE UPDATE THE\nSCHEDULE TO LIST THE\nCHILD GROWTH CHART</string>
+    <string name="child_growth_buttontext">Update\nSchedule</string>
+    <string name="standard_statistics">Standard Statistics</string>
+    <string name="actual_statistics">Actual Statistics</string>
+    <string name="s_height_a_height">Standard Height Vs Actual Height</string>
+    <string name="s_weight_a_weight">Standard Weight Vs Actual Weight</string>
 </resources>

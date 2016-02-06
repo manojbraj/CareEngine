@@ -8,4 +8,103 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--sos settings tool bar-->
+    <style name="AppThemeSOS" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/sos_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/sos_colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--settings tool bar-->
+    <style name="AppThemeSettings" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/settings_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/settings_colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--fp tool bar-->
+    <style name="Theme.ForgotPassword" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/signUpColorPrimary</item>
+        <item name="colorPrimaryDark">@color/signUpColorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--update profile tool bar-->
+    <style name="Theme.UpdateProfile" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/up_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/up_colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--family child tool bar-->
+    <style name="Theme.ChildGrowth" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/f_child_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/f_child_colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--family landing page tool bar-->
+    <style name="Theme.FamilyLandingScreen" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/f_main_screen_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/f_main_screen_colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!--spinner arrow style-->
+    <style name="SpinnerAppTheme" parent="android:Widget.Spinner">
+        <item name="android:checkMark">@drawable/arrow_down</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="AppThemeSOS.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="AppThemeSettings.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="Theme.ForgotPassword.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="Theme.UpdateProfile.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="Theme.ChildGrowth.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="Theme.FamilyLandingScreen.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppThemeSOS.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="AppThemeSettings.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="ForgotPassword.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
 </resources>
