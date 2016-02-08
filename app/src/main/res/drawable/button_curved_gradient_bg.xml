@@ -6,8 +6,7 @@
     <gradient
         android:startColor="@color/spedo_meter_start_bg_button"
         android:endColor="@color/spedo_meter_end_bg_button"
-        android:angle="90"
-        android:gradientRadius=""/>
+        android:angle="90"/>
     <corners
         android:bottomLeftRadius="10dp"
         android:bottomRightRadius="10dp"
