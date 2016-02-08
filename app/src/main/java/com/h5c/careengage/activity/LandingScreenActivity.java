@@ -57,7 +57,7 @@ public class LandingScreenActivity extends AppCompatActivity {
         Animation out = AnimationUtils.loadAnimation(this, R.anim.slide_out_bottom);
         mTitle.setInAnimation(in);
         mTitle.setOutAnimation(out);
-
+//
         mAdapter = new CoverFlowAdapter(this);
         mAdapter.setData(mData);
         mCoverFlow = (FeatureCoverFlow) findViewById(R.id.coverflow);
