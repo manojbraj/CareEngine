@@ -35,6 +35,15 @@
         
         <attr name="deviceSpecificPixelSize" format="integer" />
     </declare-styleable>
-    
 
+	<!--spedo meter -->
+	<declare-styleable name="Speedometer">
+		<attr name="maxSpeed" format="float"></attr>
+		<attr name="currentSpeed" format="float"></attr>
+		<attr name="onColor" format="color"></attr>
+		<attr name="offColor" format="color"></attr>
+		<attr name="scaleColor" format="color"></attr>
+		<attr name="scaleTextSize" format="dimension"></attr>
+		<attr name="readingTextSize" format="dimension"></attr>
+	</declare-styleable>
 </resources>

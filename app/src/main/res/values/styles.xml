@@ -55,6 +55,15 @@
         <item name="colorPrimaryDark">@color/f_main_screen_colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <!--my Activity Plus tool bar-->
+    <style name="Theme.MyActivityPlus" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/my_activity_plus_bgPrimary</item>
+        <item name="colorPrimaryDark">@color/my_activity_plus_bgPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
     <!--spinner arrow style-->
     <style name="SpinnerAppTheme" parent="android:Widget.Spinner">
         <item name="android:checkMark">@drawable/arrow_down</item>
@@ -97,6 +106,12 @@
     </style>
 
     <style name="Theme.FamilyLandingScreen.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="Theme.MyActivityPlus.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:typeface">monospace</item>

@@ -63,4 +63,10 @@
     <color name="f_main_screen_colorPrimary">#F3BF87</color>
     <color name="f_main_screen_colorPrimaryDark">#F3BF87</color>
 
+    <!--My Activity Plus-->
+    <color name="spedo_meter_bg">#232323</color>
+    <color name="spedo_meter_start_bg_button">#505050</color>
+    <color name="spedo_meter_end_bg_button">#3E3E3E</color>
+    <color name="my_activity_plus_bgPrimary">#F9D6A3</color>
+    <color name="my_activity_plus_bgPrimaryDark">#FAD7A4</color>
 </resources>
