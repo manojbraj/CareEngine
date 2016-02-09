@@ -70,4 +70,6 @@
     <color name="my_activity_plus_bgPrimary">#F9D6A3</color>
     <color name="my_activity_plus_bgPrimaryDark">#FAD7A4</color>
     <color name="my_activity_bg_gray">#F0F0F0</color>
+    <color name="my_activity_red_text">#A4110E</color>
+    <color name="my_activity_button_bg">#D40008</color>
 </resources>
