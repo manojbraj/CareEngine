@@ -74,4 +74,6 @@
     <color name="my_activity_button_bg">#D40008</color>
     <color name="my_activity_select_activity_colorPrimary">#3B3B3B</color>
     <color name="my_activity_select_activity_colorPrimaryDark">#3B3B3B</color>
+    <color name="distance_green">#17B035</color>
+
 </resources>
