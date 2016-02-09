@@ -72,4 +72,6 @@
     <color name="my_activity_bg_gray">#F0F0F0</color>
     <color name="my_activity_red_text">#A4110E</color>
     <color name="my_activity_button_bg">#D40008</color>
+    <color name="my_activity_select_activity_colorPrimary">#3B3B3B</color>
+    <color name="my_activity_select_activity_colorPrimaryDark">#3B3B3B</color>
 </resources>

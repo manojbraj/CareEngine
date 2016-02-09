@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight=".2"
+            android:gravity="center"
+            android:background="#FAFCFD">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@color/colorPrimaryDark"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight=".7"
+            android:background="#FAFCFD">
+                <com.h5c.careengage.designing.Calibri
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Distance"
+                    android:textColor="#555555"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="75dp"
+            android:layout_weight=".1"
+            android:gravity="center"
+            android:background="@color/white">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ico_forwardarrow_gray"/>
+        </LinearLayout>
+</LinearLayout>

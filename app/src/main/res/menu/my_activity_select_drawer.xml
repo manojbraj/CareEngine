@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/cycle"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Cycle Activity" />
+        <item
+            android:id="@+id/walk"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Walk Activity" />
+        <item
+            android:id="@+id/destance"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Distance" />
+        <item
+            android:id="@+id/speed"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Speed" />
+        <item
+            android:id="@+id/statistics"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Statistics" />
+        <item
+            android:id="@+id/steps"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Steps" />
+        <item
+            android:id="@+id/time"
+            android:icon="@android:drawable/ic_menu_preferences"
+            android:title="Time" />
+    </group>
+</menu>
