@@ -5,6 +5,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <!--can use the same design for Distance, Speed & Steps only
+    need to be changed is text title-->
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -61,7 +64,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:background="@drawable/distance_grid_bg">
+                android:background="@drawable/distance_grid_bg"
+                android:layout_marginBottom="15dp">
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -71,6 +75,18 @@
                         android:textStyle="bold"
                         android:gravity="center"/>
             </LinearLayout>
+
+        <!--make this layout visible when u move to speed layout
+        convert the Recycler view to Horizontal Layout type and convert
+        the height to wrap_content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+                <include
+                    android:id="@+id/layout_run_time"
+                    layout="@layout/my_activity_run_timer_layout" />
+        </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
