@@ -76,6 +76,8 @@
     <color name="my_activity_select_activity_colorPrimaryDark">#3B3B3B</color>
     <color name="distance_green">#17B035</color>
     <color name="run_time_ma_bg">#03917E</color>
+    <color name="my_activity_feedback_colorPrimary">#040E14</color>
+    <color name="my_activity_feedback_colorPrimaryDark">#040E14</color>
 
     <!--my health wallet-->
     <color name="my_health_colorPrimary">#32B779</color>
