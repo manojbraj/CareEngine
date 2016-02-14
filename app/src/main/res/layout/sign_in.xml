@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/back_arow"/>
+            android:src="@drawable/ico_backarrow"/>
         <com.h5c.careengage.designing.Calibri
             android:layout_width="match_parent"
             android:layout_height="match_parent"

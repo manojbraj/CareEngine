@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_activity_feedback_colorPrimary"
+    android:gravity="center">
+    <com.h5c.careengage.designing.Calibri
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="&quot; I Don't Find Time To Run"
+        android:textColor="@color/dark_gray_glucose"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <com.h5c.careengage.designing.Calibri
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="I Make Time To Run&quot;"
+        android:textColor="@color/recent_updates_color"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/gray_round_bg"
+            android:layout_marginTop="30dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3"
+                    android:textColor="@color/white"
+                    android:textSize="100sp"
+                    android:gravity="center"/>
+        </LinearLayout>
+</LinearLayout>
