@@ -28,12 +28,12 @@
                             android:id="@+id/image_one"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/dash_board_circle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"/>
                         <com.h5c.careengage.designing.Calibri
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="Walk"
+                            android:id="@+id/text_one"
                             android:textSize="14sp"
                             android:layout_marginTop="10dp"
                             android:textColor="@color/white"
@@ -48,12 +48,12 @@
                             android:id="@+id/image_two"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/dash_board_circle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"/>
                         <com.h5c.careengage.designing.Calibri
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="Run"
+                            android:id="@+id/text_two"
                             android:textSize="14sp"
                             android:layout_marginTop="10dp"
                             android:textColor="@color/white"
@@ -68,12 +68,12 @@
                             android:id="@+id/image_three"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/dash_board_circle"
-                            android:layout_gravity="center"/>
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"/>
                         <com.h5c.careengage.designing.Calibri
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:text="Walk"
+                            android:id="@+id/text_three"
                             android:textSize="14sp"
                             android:layout_marginTop="10dp"
                             android:textColor="@color/white"

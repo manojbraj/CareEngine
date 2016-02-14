@@ -9,20 +9,21 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.h5c.careengage.R;
-import com.h5c.careengage.entitycoverflow.GameEntity;
+import com.h5c.careengage.model.LandingScreenCoverFlowModel;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CoverFlowAdapter extends BaseAdapter {
 	
-	private ArrayList<GameEntity> mData = new ArrayList<>(0);
+	private List<LandingScreenCoverFlowModel> mData = new ArrayList<>(0);
 	private Context mContext;
 
 	public CoverFlowAdapter(Context context) {
 		mContext = context;
 	}
 	
-	public void setData(ArrayList<GameEntity> data) {
+	public void setData(List<LandingScreenCoverFlowModel> data) {
 		mData = data;
 	}
 	

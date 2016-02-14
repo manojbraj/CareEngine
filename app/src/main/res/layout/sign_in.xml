@@ -71,7 +71,7 @@
                 android:layout_marginLeft="10dp"
                 android:src="@drawable/password"/>
             <EditText
-                android:id="@+id/Password"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@null"
@@ -111,15 +111,17 @@
                 android:orientation="vertical"
                 android:layout_marginLeft="5dp">
                 <com.h5c.careengage.designing.Calibri
+                    android:id="@+id/forgot_password"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight=".5"
                     android:text="Forgot Password?"
-                    android:background="@drawable/green_curve_button"
+                    android:textColor="@color/white"
                     android:gravity="center"
                     android:padding="2dp"/>
                 <com.h5c.careengage.designing.Calibri
                     android:layout_width="wrap_content"
+                    android:id="@+id/register"
                     android:layout_height="0dp"
                     android:layout_weight=".5"
                     android:text="Register"
@@ -134,7 +136,8 @@
        android:layout_width="match_parent"
        android:layout_height="0dp"
        android:layout_weight=".5"
-       android:orientation="vertical">
+       android:orientation="vertical"
+       android:visibility="gone">
             <com.h5c.careengage.designing.Calibri
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

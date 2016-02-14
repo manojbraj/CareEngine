@@ -27,4 +27,7 @@
     <string name="actual_statistics">Actual Statistics</string>
     <string name="s_height_a_height">Standard Height Vs Actual Height</string>
     <string name="s_weight_a_weight">Standard Weight Vs Actual Weight</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -170,11 +170,11 @@ public class FeatureCoverFlow extends EndlessLoopAdapterContainer implements Vie
 	private float mTargetTop;
 	
 	//reflection
-	private final Matrix mReflectionMatrix = new Matrix();
+	//private final Matrix mReflectionMatrix = new Matrix();
 	private final Paint mPaint = new Paint();
 	private final Paint mReflectionPaint = new Paint();
 	private final PorterDuffXfermode mXfermode = new PorterDuffXfermode(Mode.DST_IN);
-	private final Canvas mReflectionCanvas = new Canvas();
+	//private final Canvas mReflectionCanvas = new Canvas();
 	
 	private int mScrollToPositionOnNextInvalidate = -1;
 	
@@ -210,7 +210,7 @@ public class FeatureCoverFlow extends EndlessLoopAdapterContainer implements Vie
 		setChildrenDrawingCacheEnabled(true);
 		setChildrenDrawnWithCacheEnabled(true);
 		
-		mReflectionMatrix.preScale(1.0f, -1.0f);
+		//mReflectionMatrix.preScale(1.0f, -1.0f);
 		
 		//init params from xml
 		if(attrs != null){
@@ -295,7 +295,7 @@ public class FeatureCoverFlow extends EndlessLoopAdapterContainer implements Vie
 		}
 
 
-		@Override
+		/*@Override
 		public Bitmap getDrawingCache(boolean autoScale) {
 			final Bitmap b = super.getDrawingCache(autoScale);
 
@@ -311,7 +311,7 @@ public class FeatureCoverFlow extends EndlessLoopAdapterContainer implements Vie
 				}
 			}
 			return b; 
-		}
+		}*/
 		
 		public void recycle(){
 			if(mReflectionCache != null){
@@ -763,14 +763,14 @@ public class FeatureCoverFlow extends EndlessLoopAdapterContainer implements Vie
     	//set child transformation on canvas
 		canvas.concat(mMatrix);		
 				
-		final Bitmap rfCache = ((CoverFrame) child).mReflectionCache;
+		//final Bitmap rfCache = ((CoverFrame) child).mReflectionCache;
 		
-		if(mReflectionBackgroundColor != Color.TRANSPARENT){
+		/*if(mReflectionBackgroundColor != Color.TRANSPARENT){
 			final int top = bitmap.getHeight() + mReflectionGap - 2;
 			final float frame = 1.0f;
 			mReflectionPaint.setColor(mReflectionBackgroundColor);
 			canvas.drawRect(frame, top + frame , rfCache.getWidth()-frame, top + rfCache.getHeight() - frame, mReflectionPaint);
-		}
+		}*/
 		
 		mPaint.reset();
 		mPaint.setAntiAlias(true);
@@ -779,15 +779,15 @@ public class FeatureCoverFlow extends EndlessLoopAdapterContainer implements Vie
 		//Draw child bitmap with applied transforms
 		canvas.drawBitmap(bitmap, 0.0f, 0.0f, mPaint);
 		
-		//Draw reflection
-		canvas.drawBitmap(rfCache, 0.0f, bitmap.getHeight() - 2 + mReflectionGap, mPaint);
+		/*//Draw reflection
+		canvas.drawBitmap(rfCache, 0.0f, bitmap.getHeight() - 2 + mReflectionGap, mPaint);*/
 		
 		
 		canvas.restore();		
 		return false;
 	}
     
-    private Bitmap createReflectionBitmap(Bitmap original){
+    /*private Bitmap createReflectionBitmap(Bitmap original){
     	final int w = original.getWidth();
     	final int h = original.getHeight();
     	final int rh = (int) (h * mReflectionHeight);
@@ -804,7 +804,7 @@ public class FeatureCoverFlow extends EndlessLoopAdapterContainer implements Vie
     	mReflectionCanvas.drawRect(0, 0, reflection.getWidth(), reflection.getHeight(), mPaint);
     	
     	return reflection;
-    }
+    }*/
     
     /**
      * Fill outRect with transformed child hit rectangle. Rectangle is not moved to its position on screen, neither getSroolX is accounted for

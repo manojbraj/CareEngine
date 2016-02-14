@@ -12,7 +12,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 
 import com.h5c.careengage.R;
-import com.h5c.careengage.jsoninterface.SpeedChangeListener;
+import com.h5c.careengage.servicesAndGeneralInterface.SpeedChangeListener;
 
 /**
  * Created by user on 2/8/2016.

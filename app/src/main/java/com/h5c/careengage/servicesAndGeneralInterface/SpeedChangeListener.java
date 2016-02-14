@@ -1,4 +1,4 @@
-package com.h5c.careengage.jsoninterface;
+package com.h5c.careengage.servicesAndGeneralInterface;
 
 /**
  * Created by user on 2/8/2016.

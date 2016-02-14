@@ -15,3 +15,10 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+# For Facebook SDK
+-keepattributes Signature
+-keep class com.facebook.** {
+*;
+}
+# For CleverTap SDK
+-dontwarn com.clevertap.android.sdk.**

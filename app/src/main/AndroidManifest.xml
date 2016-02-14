@@ -1,26 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.h5c.careengage"
-     xmlns:tools="http://schemas.android.com/tools">
-    <uses-sdk tools:overrideLibrary="com.github.lzyzsd.circleprogress"/>
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.h5c.careengage">
+
+    <uses-sdk tools:overrideLibrary="com.clevertap.android.sdk,com.github.lzyzsd.circleprogress" />
+    <!-- CleverTap permissions -->
+    <!-- Required to retrieve a unique identifier for the device, see note below -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Required to allow the app to send events -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Recommended so that we can be smart about when to send the data -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Recommended so that we can get the user's primary e-mail address -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- Recommended so that we can get the user's location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Recommended -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- CleverTap Push Notification Permissions -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.h5c.careengage.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.h5c.careengage.permission.C2D_MESSAGE" />
+
     <application
+        android:name=".utils.CareEngage"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".activity.SplashScreenActivity" >
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="R59-58W-554Z" />
+        ;
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="0b5-c52" />
+
+        <activity android:name=".activity.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- Deep Links -->
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="careengage" />
+            </intent-filter>
         </activity>
         <activity
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:name=".activity.LandingScreenActivity" >
-        </activity>
-        <activity android:name=".activity.DashBoard" >
-        </activity>
+            android:name=".activity.LandingScreenActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
+        <!-- Push Notifications, replace 12345678910 with your GCM sender project number -->
+        <meta-data
+            android:name="GCM_SENDER_ID"
+            android:value="id:742241875469" />
+
+        <receiver
+            android:name="com.clevertap.android.sdk.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.h5c.careengage" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- CleverTap In-app notifications -->
+        <activity
+            android:name="com.clevertap.android.sdk.InAppNotificationActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- specify activities where In-app notifications should not be shown -->
+        <!-- pretend there is a SplashActivity in this project -->
+        <meta-data
+            android:name="CLEVERTAP_INAPP_EXCLUDE"
+            android:value="SplashScreenActivity" />
+
+        <receiver
+            android:name="com.clevertap.android.sdk.InstallReferrerBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.SupportActivity"></activity>
     </application>
+
 </manifest>
