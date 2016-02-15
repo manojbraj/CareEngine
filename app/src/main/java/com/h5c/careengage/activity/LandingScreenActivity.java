@@ -41,7 +41,6 @@ public class LandingScreenActivity extends FragmentActivity implements FeatureCo
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_screen);
         ButterKnife.inject(this);
-
         mData.add(new LandingScreenCoverFlowModel(R.drawable.image_one, R.string.dashboard));
         mData.add(new LandingScreenCoverFlowModel(R.drawable.image_two, R.string.My_Activity_Plus));
         mData.add(new LandingScreenCoverFlowModel(R.drawable.image_three, R.string.my_health_wallet));
