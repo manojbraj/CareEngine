@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 import com.github.aurae.retrofit.LoganSquareConverterFactory;
@@ -48,23 +49,27 @@ public class LoginFragment extends Fragment {
     @OnClick(R.id.submit_signin_butten)
     protected void loginSubmit(){
 if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!password.getText().toString().isEmpty()){
-//TODO: PLEASE DO LOGIN AND FORGET PASSWORD JSON AND SEND ME
+    //TODO: PLEASE DO LOGIN AND FORGET PASSWORD JSON AND SEND ME
     LoginRequestModel loginRequestModel = new LoginRequestModel();
     loginRequestModel.setUserName(userId.getText().toString());
     loginRequestModel.setPassword(password.getText().toString());
-    String abc = gson.toJson(loginRequestModel);
- /*//   Call<String> result = loginService.LoginService(LoginRequestModel.serialVersionUID,abc);
+    //String abc = gson.toJson(loginRequestModel);
+    Call<String> result = loginService.LoginService(loginRequestModel);
     result.enqueue(new Callback<String>() {
         @Override
         public void onResponse(Response<String> response, Retrofit retrofit) {
+                if(response.isSuccess()){
+                    Toast.makeText(getActivity(),"success",Toast.LENGTH_LONG).show();
+                }else {
 
+                }
         }
 
         @Override
         public void onFailure(Throwable t) {
 
         }
-    });*/
+    });
 
 }else if(userId != null&&!userId.getText().toString().isEmpty()&&password == null&&password.getText().toString().isEmpty()){
     Snackbar snackbar = Snackbar.make(getView(), "Please Enter A Valid Password...", Snackbar.LENGTH_LONG);

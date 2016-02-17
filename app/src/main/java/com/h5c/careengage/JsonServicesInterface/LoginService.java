@@ -2,6 +2,7 @@ package com.h5c.careengage.JsonServicesInterface;
 
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 import com.h5c.careengage.constantValue.JsonConstants;
+import com.h5c.careengage.model.JsonRequestModel.LoginRequestModel;
 
 import retrofit.Call;
 import retrofit.http.Body;
@@ -14,6 +15,5 @@ import retrofit.http.POST;
 
 public interface LoginService {
     @POST(JsonConstants.LOGIN_URL)
-    Call<String> LoginService(@Header("Content-Type: application/json")
-    @Body String param2);
+    Call<String> LoginService(LoginRequestModel loginRequestModel);
 }
