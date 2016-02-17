@@ -12,23 +12,23 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.bluelinelabs.logansquare.annotation.JsonObject;
-import com.github.aurae.retrofit.LoganSquareConverterFactory;
 import com.google.gson.Gson;
 import com.h5c.careengage.JsonServicesInterface.LoginService;
 import com.h5c.careengage.R;
+import com.h5c.careengage.api.RestClient;
 import com.h5c.careengage.constantValue.JsonConstants;
 import com.h5c.careengage.designing.Calibri;
 import com.h5c.careengage.designing.ColoredSnackbar;
+import com.h5c.careengage.model.JsonRequestModel.LoginOutPut;
 import com.h5c.careengage.model.JsonRequestModel.LoginRequestModel;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 import butterknife.Optional;
-import retrofit.Call;
 import retrofit.Callback;
-import retrofit.Response;
-import retrofit.Retrofit;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 /**
  * Created by sastry on 2/14/2016.
@@ -53,20 +53,19 @@ if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!pa
     LoginRequestModel loginRequestModel = new LoginRequestModel();
     loginRequestModel.setUserName(userId.getText().toString());
     loginRequestModel.setPassword(password.getText().toString());
-    //String abc = gson.toJson(loginRequestModel);
-    Call<String> result = loginService.LoginService(loginRequestModel);
-    result.enqueue(new Callback<String>() {
-        @Override
-        public void onResponse(Response<String> response, Retrofit retrofit) {
-                if(response.isSuccess()){
-                    Toast.makeText(getActivity(),"success",Toast.LENGTH_LONG).show();
-                }else {
 
-                }
+    RestClient.get().LoginService(loginRequestModel, new Callback<LoginOutPut>() {
+        @Override
+        public void success(LoginOutPut loginOutPut, Response response) {
+            if(loginOutPut.getHttpHeaders().getH5cAuthToken() == null){
+
+            }else {
+                Toast.makeText(getActivity(),"login success \n"+loginOutPut.getHttpHeaders().getH5cAuthToken(),Toast.LENGTH_LONG).show();
+            }
         }
 
         @Override
-        public void onFailure(Throwable t) {
+        public void failure(RetrofitError error) {
 
         }
     });
@@ -110,7 +109,7 @@ if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!pa
 private LoginService loginService = null;
 
     // TODO: Rename and change types and number of parameters
-    @Override
+   /* @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         gson = new Gson();
@@ -120,7 +119,7 @@ private LoginService loginService = null;
                 .build();
         loginService = retrofit.create(LoginService.class);
 
-    }
+    }*/
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

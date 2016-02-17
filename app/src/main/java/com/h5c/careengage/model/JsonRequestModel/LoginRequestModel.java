@@ -1,5 +1,7 @@
 package com.h5c.careengage.model.JsonRequestModel;
 
+import com.google.gson.annotations.Expose;
+
 import java.io.Serializable;
 
 /**
@@ -10,8 +12,10 @@ public class LoginRequestModel implements Serializable {
     /** The serialVersionUID of type long. */
     private static final long serialVersionUID = 2167197224675309885L;
 
+    @Expose
     private String userName;
 
+    @Expose
     private String password;
 
     /**
