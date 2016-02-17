@@ -2,6 +2,7 @@ package com.h5c.careengage.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,19 +10,31 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.bluelinelabs.logansquare.annotation.JsonObject;
+import com.github.aurae.retrofit.LoganSquareConverterFactory;
+import com.google.gson.Gson;
+import com.h5c.careengage.JsonServicesInterface.LoginService;
 import com.h5c.careengage.R;
+import com.h5c.careengage.constantValue.JsonConstants;
 import com.h5c.careengage.designing.Calibri;
+import com.h5c.careengage.designing.ColoredSnackbar;
+import com.h5c.careengage.model.JsonRequestModel.LoginRequestModel;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 import butterknife.Optional;
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;
 
 /**
  * Created by sastry on 2/14/2016.
  */
 public class LoginFragment extends Fragment {
     private View view=null;
+    private Gson gson= null;
     @Optional
     @InjectView(R.id.user_ID)
     EditText userId = null;
@@ -34,8 +47,40 @@ public class LoginFragment extends Fragment {
     @Optional
     @OnClick(R.id.submit_signin_butten)
     protected void loginSubmit(){
+if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!password.getText().toString().isEmpty()){
+//TODO: PLEASE DO LOGIN AND FORGET PASSWORD JSON AND SEND ME
+    LoginRequestModel loginRequestModel = new LoginRequestModel();
+    loginRequestModel.setUserName(userId.getText().toString());
+    loginRequestModel.setPassword(password.getText().toString());
+    String abc = gson.toJson(loginRequestModel);
+ /*//   Call<String> result = loginService.LoginService(LoginRequestModel.serialVersionUID,abc);
+    result.enqueue(new Callback<String>() {
+        @Override
+        public void onResponse(Response<String> response, Retrofit retrofit) {
 
-    }
+        }
+
+        @Override
+        public void onFailure(Throwable t) {
+
+        }
+    });*/
+
+}else if(userId != null&&!userId.getText().toString().isEmpty()&&password == null&&password.getText().toString().isEmpty()){
+    Snackbar snackbar = Snackbar.make(getView(), "Please Enter A Valid Password...", Snackbar.LENGTH_LONG);
+    snackbar.setActionTextColor(getResources().getColor(R.color.white));
+    ColoredSnackbar.alert(snackbar).show();
+}else if(userId == null&&userId.getText().toString().isEmpty()&&password != null&&!password.getText().toString().isEmpty()){
+    Snackbar snackbar = Snackbar.make(getView(), "Please Enter A Valid User Name...", Snackbar.LENGTH_LONG);
+    snackbar.setActionTextColor(getResources().getColor(R.color.white));
+    ColoredSnackbar.alert(snackbar).show();
+}else{
+    Snackbar snackbar = Snackbar.make(getView(), "Please Enter The Details Above...", Snackbar.LENGTH_LONG);
+    snackbar.setActionTextColor(getResources().getColor(R.color.white));
+    ColoredSnackbar.alert(snackbar).show();
+}
+}
+
     @Optional
     @OnClick(R.id.submit_butten)
     protected void forgotSubmit(){
@@ -57,12 +102,18 @@ public class LoginFragment extends Fragment {
     public LoginFragment() {
         // Required empty public constructor
     }
-
+private LoginService loginService = null;
 
     // TODO: Rename and change types and number of parameters
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        gson = new Gson();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(JsonConstants.BASE_URL)
+                .addConverterFactory(LoganSquareConverterFactory.create())
+                .build();
+        loginService = retrofit.create(LoginService.class);
 
     }
 

@@ -8,14 +8,23 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.h5c.careengage.R;
+import com.h5c.careengage.activity.SupportActivity;
+import com.h5c.careengage.constantValue.CommonConstants;
+import com.h5c.careengage.servicesAndGeneralInterface.IntentAndFragmentService;
 
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by sastry on 2/14/2016.
  */
 public class MyFavouritesLandingScreen extends Fragment {
     private View view = null;
+    @OnClick(R.id.click_fravout)
+    protected void clickFravout(){
+        CommonConstants.CHECK_FOR_LOGIN = true;
+        IntentAndFragmentService.intentDisplay(getActivity(), SupportActivity.class, null);
+    }
     public MyFavouritesLandingScreen() {
         // Required empty public constructor
     }

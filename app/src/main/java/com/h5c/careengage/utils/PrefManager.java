@@ -31,17 +31,11 @@ public class PrefManager {
     private static final String IS_LOGIN = "IsLoggedIn";
 
     // Constructor
-    public PrefManager(Context context, Boolean resentSearch) {
-        if (resentSearch) {
-            this._context = context;
-            prefArray = _context.getSharedPreferences(PREF_ARRAY_NAME, PRIVATE_MODE);
-            editorArray = prefArray.edit();
-        } else {
+    public PrefManager(Context context) {
             this._context = context;
             pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
             editor = pref.edit();
         }
-    }
     public void deletePrefArray() {
         editorArray.clear();
         editorArray.commit();
