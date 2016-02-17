@@ -67,9 +67,8 @@ public class LandingScreenActivity extends FragmentActivity implements FeatureCo
         mAdapter = new CoverFlowAdapter(this);
         mAdapter.setData(mData);
         mCoverFlow.setAdapter(mAdapter);
-       mCoverFlow.setSelection(0);
+        mCoverFlow.setSelection(0);
         mCoverFlow.setSelected(true);
-
 
         mCoverFlow.setOnScrollPositionListener(this);
 
