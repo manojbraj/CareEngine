@@ -41,6 +41,8 @@ public class LandingScreenActivity extends FragmentActivity implements FeatureCo
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_screen);
         ButterKnife.inject(this);
+        mData.add(new LandingScreenCoverFlowModel(R.drawable.image_eight, R.string.my_messages));
+        mData.add(new LandingScreenCoverFlowModel(R.drawable.image_nine, R.string.my_favourites));
         mData.add(new LandingScreenCoverFlowModel(R.drawable.image_one, R.string.dashboard));
         mData.add(new LandingScreenCoverFlowModel(R.drawable.image_two, R.string.My_Activity_Plus));
         mData.add(new LandingScreenCoverFlowModel(R.drawable.image_three, R.string.my_health_wallet));
@@ -48,8 +50,6 @@ public class LandingScreenActivity extends FragmentActivity implements FeatureCo
         mData.add(new LandingScreenCoverFlowModel(R.drawable.image_five, R.string.my_health_diary));
         mData.add(new LandingScreenCoverFlowModel(R.drawable.image_six, R.string.my_health_history));
         mData.add(new LandingScreenCoverFlowModel(R.drawable.image_seven, R.string.my_family_diary));
-        mData.add(new LandingScreenCoverFlowModel(R.drawable.image_eight, R.string.my_messages));
-        mData.add(new LandingScreenCoverFlowModel(R.drawable.image_nine, R.string.my_favourites));
 
         mTitle.setFactory(new ViewSwitcher.ViewFactory() {
             @Override

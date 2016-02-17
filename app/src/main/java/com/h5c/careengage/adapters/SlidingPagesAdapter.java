@@ -31,31 +31,31 @@ public class SlidingPagesAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                page = new DashBordLandingScreenFragment();
-                break;
-            case 1:
-               page = new MyActivityPlusLandingScreen();
-                break;
-            case 2:
-               page = new MyHealthWalletLandingScreen();
-                break;
-            case 3:
-               page = new MyWellnessLandingScreen();
-                break;
-            case 4:
-               page = new MyHealthDiaryLandingScreen();
-                break;
-            case 5:
-                page = new MyHealthHistoryLandingScreen();
-                break;
-            case 6:
-                page = new MyFamilyDiaryLandingScreen();
-                break;
-            case 7:
                 page = new MyMessagesLandingScreen();
                 break;
-            case 8:
+            case 1:
                 page = new MyFavouritesLandingScreen();
+                break;
+            case 2:
+                page = new DashBordLandingScreenFragment();
+                break;
+            case 3:
+                page = new MyActivityPlusLandingScreen();
+                break;
+            case 4:
+                page = new MyHealthWalletLandingScreen();
+                break;
+            case 5:
+                page = new MyWellnessLandingScreen();
+                break;
+            case 6:
+                page = new MyHealthDiaryLandingScreen();
+                break;
+            case 7:
+                page = new MyHealthHistoryLandingScreen();
+                break;
+            case 8:
+                page = new MyFamilyDiaryLandingScreen();
                 break;
         }
         return page;
