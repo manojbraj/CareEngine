@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/CareEngine.iml" filepath="$PROJECT_DIR$/.idea/CareEngine.iml" />
-      <module fileurl="file://$PROJECT_DIR$/CareEngine.iml" filepath="$PROJECT_DIR$/CareEngine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CareEngine.iml" filepath="$PROJECT_DIR$/.idea/CareEngine.iml" />
     </modules>
   </component>
 </project>
