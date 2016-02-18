@@ -5,7 +5,9 @@ import android.support.v4.app.FragmentActivity;
 
 import com.h5c.careengage.R;
 import com.h5c.careengage.constantValue.CommonConstants;
+import com.h5c.careengage.fragments.CyclingActivityFragment;
 import com.h5c.careengage.fragments.LoginFragment;
+import com.h5c.careengage.fragments.RunActivityFragment;
 import com.h5c.careengage.fragments.WalkActivityFragment;
 import com.h5c.careengage.servicesAndGeneralInterface.IntentAndFragmentService;
 import com.h5c.careengage.utils.PrefManager;
@@ -50,11 +52,11 @@ public class SupportActivity extends FragmentActivity {
             }
             break;
             case CommonConstants.RUN: {
-                IntentAndFragmentService.fragmentdisplay(this, R.id.support_fragments, new WalkActivityFragment(), null, false, false);
+                IntentAndFragmentService.fragmentdisplay(this, R.id.support_fragments, new RunActivityFragment(), null, false, false);
             }
             break;
             case CommonConstants.CYCLING: {
-                IntentAndFragmentService.fragmentdisplay(this, R.id.support_fragments, new WalkActivityFragment(), null, false, false);
+                IntentAndFragmentService.fragmentdisplay(this, R.id.support_fragments, new CyclingActivityFragment(), null, false, false);
             }
             break;
         }

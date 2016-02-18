@@ -18,23 +18,23 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnItemClick;
 
 /**
- * Created by sastry on 2/15/2016.
+ * Created by sastry on 2/18/2016.
  */
-public class WalkActivityFragment extends Fragment {
+public class CyclingActivityFragment extends Fragment{
     private View view = null;
     @InjectView(R.id.select_activity_list)
     RecyclerView mRecyclerView = null;
+
     private List<LandingScreenCoverFlowModel> listItems = new ArrayList<>();
     private MyActivityPlusAdapter myActivityPlusAdapter = null;
-
-    public WalkActivityFragment() {
+    public CyclingActivityFragment() {
         // Required empty public constructor
         listItems.add(new LandingScreenCoverFlowModel(R.drawable.ic_ico_distancerun, R.string.distance));
         listItems.add(new LandingScreenCoverFlowModel(R.drawable.ic_run_icon_timerun, R.string.time));
         listItems.add(new LandingScreenCoverFlowModel(R.drawable.ic_ico_speedrun, R.string.speed));
-        listItems.add(new LandingScreenCoverFlowModel(R.drawable.ic_ico_stepsrecord, R.string.step));
     }
 
 
@@ -53,7 +53,7 @@ public class WalkActivityFragment extends Fragment {
         ButterKnife.inject(this, view);
         // Initialize recycler view
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        myActivityPlusAdapter = new MyActivityPlusAdapter(getActivity(), listItems);
+        myActivityPlusAdapter = new MyActivityPlusAdapter(getActivity(),listItems);
         mRecyclerView.setAdapter(myActivityPlusAdapter);
         return view;
     }

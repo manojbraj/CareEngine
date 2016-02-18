@@ -124,7 +124,7 @@
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/password"/>
             <EditText
-                android:id="@+id/Email_id"
+                android:id="@+id/email_id"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@null"
@@ -271,6 +271,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight=".45">
                     <Button
+                        android:id="@+id/submit"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/forgot_password_buttonbg"
@@ -287,13 +288,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="10dp">
                     <com.h5c.careengage.designing.Calibri
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight=".5"
-                        android:text="Forgot Password?"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"/>
-                    <com.h5c.careengage.designing.Calibri
+                        android:id="@+id/login"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight=".5"
