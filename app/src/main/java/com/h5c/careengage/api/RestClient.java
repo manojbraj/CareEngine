@@ -1,6 +1,6 @@
 package com.h5c.careengage.api;
 
-import com.h5c.careengage.JsonServicesInterface.LoginService;
+import com.h5c.careengage.jsonServicesInterface.LoginService;
 import com.h5c.careengage.constantValue.JsonConstants;
 import com.squareup.okhttp.OkHttpClient;
 
