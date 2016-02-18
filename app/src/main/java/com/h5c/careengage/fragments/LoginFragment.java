@@ -18,8 +18,8 @@ import com.h5c.careengage.activity.SupportActivity;
 import com.h5c.careengage.api.RestClient;
 import com.h5c.careengage.designing.Calibri;
 import com.h5c.careengage.designing.ColoredSnackbar;
+import com.h5c.careengage.model.JsonRequestModel.LoginRequestModel;
 import com.h5c.careengage.model.jsonResponceModel.LoginOutPut;
-import com.h5c.careengage.model.jsonRequestModel.LoginRequestModel;
 import com.h5c.careengage.servicesAndGeneralInterface.IntentAndFragmentService;
 import com.h5c.careengage.utils.PrefManager;
 
@@ -51,7 +51,7 @@ public class LoginFragment extends Fragment {
     @OnClick(R.id.submit_signin_butten)
     protected void loginSubmit(){
 if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!password.getText().toString().isEmpty()){
-    //TODO: PLEASE DO LOGIN AND FORGET PASSWORD JSON AND SEND ME
+    //TODO: PLEASE DO LOGIN AND FORGET PASSWORD JSON AND SEND ME - Login Done
     LoginRequestModel loginRequestModel = new LoginRequestModel();
     loginRequestModel.setUserName(userId.getText().toString());
     loginRequestModel.setPassword(password.getText().toString());
