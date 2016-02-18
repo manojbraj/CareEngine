@@ -25,7 +25,7 @@ public class PrefManager {
     int PRIVATE_MODE = 0;
 
     // Shared pref file name
-    public static final String PREF_NAME = "Ketch";
+    public static final String PREF_NAME = "careenagage";
     private static final String PREF_ARRAY_NAME = "ResentSearch";
     // All Shared Preferences Keys
     private static final String IS_LOGIN = "IsLoggedIn";
@@ -36,7 +36,7 @@ public class PrefManager {
             pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
             editor = pref.edit();
         }
-    public void deletePrefArray() {
+   /* public void deletePrefArray() {
         editorArray.clear();
         editorArray.commit();
     }
@@ -55,11 +55,11 @@ public class PrefManager {
             array.add(prefArray.getString(arrayName + "_" + i, null));
         return array;
     }
-
+*/
     /**
      * Create login session
      */
-    public void createLoginSession(String user_name,String email_id, String mobile, String user_id, String cart_id,String personPhotoUrl) {
+    public void createLoginSession() {
         // Storing login value as TRUE
         editor.putBoolean(IS_LOGIN, true);
 

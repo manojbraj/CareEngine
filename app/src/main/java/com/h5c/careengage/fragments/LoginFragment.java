@@ -7,20 +7,21 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.bluelinelabs.logansquare.annotation.JsonObject;
 import com.google.gson.Gson;
 import com.h5c.careengage.JsonServicesInterface.LoginService;
 import com.h5c.careengage.R;
+import com.h5c.careengage.activity.SupportActivity;
 import com.h5c.careengage.api.RestClient;
-import com.h5c.careengage.constantValue.JsonConstants;
 import com.h5c.careengage.designing.Calibri;
 import com.h5c.careengage.designing.ColoredSnackbar;
-import com.h5c.careengage.model.JsonRequestModel.LoginOutPut;
-import com.h5c.careengage.model.JsonRequestModel.LoginRequestModel;
+import com.h5c.careengage.model.jsonResponceModel.LoginOutPut;
+import com.h5c.careengage.model.jsonRequestModel.LoginRequestModel;
+import com.h5c.careengage.servicesAndGeneralInterface.IntentAndFragmentService;
+import com.h5c.careengage.utils.PrefManager;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -35,6 +36,7 @@ import retrofit.client.Response;
  */
 public class LoginFragment extends Fragment {
     private View view=null;
+    PrefManager pref = null;
     private Gson gson= null;
     @Optional
     @InjectView(R.id.user_ID)
@@ -57,16 +59,24 @@ if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!pa
     RestClient.get().LoginService(loginRequestModel, new Callback<LoginOutPut>() {
         @Override
         public void success(LoginOutPut loginOutPut, Response response) {
-            if(loginOutPut.getHttpHeaders().getH5cAuthToken() == null){
-
-            }else {
+            if(loginOutPut.getHttpHeaders().getH5cAuthToken() != null){
                 Toast.makeText(getActivity(),"login success \n"+loginOutPut.getHttpHeaders().getH5cAuthToken(),Toast.LENGTH_LONG).show();
+                pref.createLoginSession();
+                IntentAndFragmentService.intentDisplay(getActivity(), SupportActivity.class,null);
+
+
+            }else{
+                Snackbar snackbar = Snackbar.make(getView(), "Something Went Wrong, Please try later...", Snackbar.LENGTH_LONG);
+                snackbar.setActionTextColor(getResources().getColor(R.color.white));
+                ColoredSnackbar.warning(snackbar).show();
             }
         }
 
         @Override
         public void failure(RetrofitError error) {
-
+            Snackbar snackbar = Snackbar.make(getView(), "Something Went Wrong, Please try later...", Snackbar.LENGTH_LONG);
+            snackbar.setActionTextColor(getResources().getColor(R.color.white));
+            ColoredSnackbar.warning(snackbar).show();
         }
     });
 
@@ -84,10 +94,20 @@ if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!pa
     ColoredSnackbar.alert(snackbar).show();
 }
 }
-
+@Optional
+@InjectView(R.id.forgotPasswordLayout)
+    LinearLayout forgotPasswordLayout;
     @Optional
+    @InjectView(R.id.signidlayout)
+    LinearLayout signidlayout;
+@Optional
     @OnClick(R.id.submit_butten)
     protected void forgotSubmit(){
+    //please put it after sucessfully changed
+    if(signidlayout.getVisibility() == View.GONE){
+        signidlayout.setVisibility(View.VISIBLE);
+        forgotPasswordLayout.setVisibility(View.GONE);
+    }
 
     }
     @Optional
@@ -96,11 +116,16 @@ if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!pa
     @OnClick(R.id.forgot_password)
     protected void forgotPasswordText(){
         forgotPasswordText.setBackgroundResource(R.drawable.green_curve_button);
+        if(forgotPasswordLayout.getVisibility() == View.GONE){
+            forgotPasswordLayout.setVisibility(View.VISIBLE);
+            signidlayout.setVisibility(View.GONE);
+        }
     }
 
     @Optional
     @OnClick(R.id.register)
     protected void registerText(){
+IntentAndFragmentService.fragmentdisplay(getActivity(), R.id.support_fragments, new RegistrationFragment(), null, false, false);
 
     }
     public LoginFragment() {
@@ -127,6 +152,7 @@ private LoginService loginService = null;
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.sign_in, container, false);
         ButterKnife.inject(this, view);
+        pref = new PrefManager(getActivity());
         return view;
     }
 

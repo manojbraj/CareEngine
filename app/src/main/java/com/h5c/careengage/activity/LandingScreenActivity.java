@@ -92,10 +92,8 @@ public class LandingScreenActivity extends FragmentActivity implements FeatureCo
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-        /*mCoverFlow.setSelected(true);
-       // mCoverFlow.setSelection(0);
-        mCoverFlow.setSeletedItemPosition(position);*//*
-        mCoverFlow.getItemAtPosition(position);*/
+        mCoverFlow.setSelection(position);
+        mCoverFlow.setSelected(true);
     }
 
     @Override

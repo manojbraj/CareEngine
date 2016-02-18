@@ -20,6 +20,11 @@
     <string name="my_family_diary">My Family Diary</string>
     <string name="my_messages">My Messages</string>
     <string name="my_favourites">My Favourites</string>
+    <!--Walk,Run,Cycling-->
+    <string name="distance">Distance</string>
+    <string name="time">Time</string>
+    <string name="speed">Speed</string>
+    <string name="step">Steps</string>
     <!--child growth-->
     <string name="child_growth_tracker">PLEASE UPDATE THE\nSCHEDULE TO LIST THE\nCHILD GROWTH CHART</string>
     <string name="child_growth_buttontext">Update\nSchedule</string>

@@ -26,6 +26,7 @@
             android:textStyle="bold"/>
     </android.support.v7.widget.Toolbar>
     <LinearLayout
+        android:id="@+id/signidlayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".5"
@@ -131,6 +132,7 @@
         </LinearLayout>
     </LinearLayout>
    <LinearLayout
+       android:id="@+id/forgotPasswordLayout"
        android:layout_width="match_parent"
        android:layout_height="0dp"
        android:layout_weight=".5"
