@@ -11,4 +11,5 @@ public class CommonConstants {
     public static final String WALK = "WalkPage";
     public static final String CYCLING = "CyclingPage";
     public static Boolean CHECK_FOR_LOGIN = false;
+
 }

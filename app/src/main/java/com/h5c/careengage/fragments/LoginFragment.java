@@ -12,13 +12,14 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
-import com.h5c.careengage.JsonServicesInterface.LoginService;
 import com.h5c.careengage.R;
+import com.h5c.careengage.jsonServicesInterface.LoginService;
+
 import com.h5c.careengage.activity.SupportActivity;
 import com.h5c.careengage.api.RestClient;
 import com.h5c.careengage.designing.Calibri;
 import com.h5c.careengage.designing.ColoredSnackbar;
-import com.h5c.careengage.model.JsonRequestModel.LoginRequestModel;
+import com.h5c.careengage.model.jsonRequestModel.LoginRequestModel;
 import com.h5c.careengage.model.jsonResponceModel.LoginOutPut;
 import com.h5c.careengage.servicesAndGeneralInterface.IntentAndFragmentService;
 import com.h5c.careengage.utils.PrefManager;
