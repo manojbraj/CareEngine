@@ -9,18 +9,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.h5c.careengage.R;
-import com.h5c.careengage.jsonServicesInterface.LoginService;
-
-import com.h5c.careengage.activity.SupportActivity;
-import com.h5c.careengage.api.RestClient;
 import com.h5c.careengage.designing.Calibri;
 import com.h5c.careengage.designing.ColoredSnackbar;
-import com.h5c.careengage.model.jsonRequestModel.LoginRequestModel;
-import com.h5c.careengage.model.jsonResponceModel.LoginOutPut;
 import com.h5c.careengage.servicesAndGeneralInterface.IntentAndFragmentService;
 import com.h5c.careengage.utils.PrefManager;
 
@@ -28,9 +21,6 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 import butterknife.Optional;
-import retrofit.Callback;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
 
 /**
  * Created by sastry on 2/14/2016.
@@ -53,7 +43,7 @@ public class LoginFragment extends Fragment {
     protected void loginSubmit(){
 if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!password.getText().toString().isEmpty()){
     //TODO: PLEASE DO LOGIN AND FORGET PASSWORD JSON AND SEND ME - Login Done
-    LoginRequestModel loginRequestModel = new LoginRequestModel();
+   /* LoginRequestModel loginRequestModel = new LoginRequestModel();
     loginRequestModel.setUserName(userId.getText().toString());
     loginRequestModel.setPassword(password.getText().toString());
 
@@ -79,7 +69,7 @@ if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!pa
             snackbar.setActionTextColor(getResources().getColor(R.color.white));
             ColoredSnackbar.warning(snackbar).show();
         }
-    });
+    });*/
 
 }else if(userId != null&&!userId.getText().toString().isEmpty()&&password == null&&password.getText().toString().isEmpty()){
     Snackbar snackbar = Snackbar.make(getView(), "Please Enter A Valid Password...", Snackbar.LENGTH_LONG);
@@ -133,7 +123,7 @@ IntentAndFragmentService.fragmentdisplay(getActivity(), R.id.support_fragments, 
     public LoginFragment() {
         // Required empty public constructor
     }
-private LoginService loginService = null;
+//private LoginService loginService = null;
 
     // TODO: Rename and change types and number of parameters
    /* @Override
