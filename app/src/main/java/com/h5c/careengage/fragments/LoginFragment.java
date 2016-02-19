@@ -100,7 +100,8 @@ if(userId != null&&!userId.getText().toString().isEmpty()&&password != null&&!pa
     @Optional
     @InjectView(R.id.signidlayout)
     LinearLayout signidlayout;
-@Optional
+
+    @Optional
     @OnClick(R.id.submit_butten)
     protected void forgotSubmit(){
     //please put it after sucessfully changed
